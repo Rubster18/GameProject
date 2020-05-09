@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"  content="">
+        <meta name =viewport content="width=device-width, initial-scale=1">
+        <title>RPG game</title>
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src=./js/engine.js></script>
+        <script src=./js/playerchars.js></script>
+        <script src=./js/enemies.js></script>
+    </head>
+    <body>
+
+       <div class="header">
+        <h1>Choose your class!</h1>
+       </div> 
+
+       <div class="ui">
+            <a href="#" onclick="gameManager.setStart('warrior')" class="select">
+                <img src="./images/player/warrior.jpg" alt="Warrior image" class="select">
+                <div>
+                    <h2>Warrior</h2>
+                    <p class="descrip">Warriors have high health, damage and defense, however their sturdy armor makes them somewhat slow.</p>
+                </div>
+            </a>
+            <a href="#" onclick="gameManager.setStart('rogue')">
+                <img src="./images/player/rogue.jpg" alt="Rogue image" class="select">
+                <div>
+                    <h2>Rogue</h2>
+                    <p class="descrip">Rogues are nimble and fast, they can attack many times making them very deadly, the downside is that because of their light armor, their health is low and their damage are not as high as other classes.</p>
+                </div>
+            </a>
+            <a href="#"  onclick="gameManager.setStart('archer')">
+                <img src="./images/player/archer.jpg" alt="Archer image" class="select">
+                <div>
+                    <h2>Archer</h2>
+                    <p class="descrip">Archers are precise and deadly, they can't attack many times but when they hit they hit hard, they speed and health are well balanced.</p>
+                </div>
+            </a>
+            <a href="#"  onclick="gameManager.setStart('mage')">
+                <img src="./images/player/mage.jpg" alt="Mage image" class="select">
+                <div>
+                    <h2>Mage</h2>
+                    <p class="descrip">By converting mana into devastating spells the mages can decimate foes, they lack many combat stats but they can make it up by ending fights in secconds.</p>
+                </div>
+            </a>
+        </div> 
+        <div class="action-bar">
+
+        </div> 
+        <div class="arena">
+
+        </div> 
+        <div class="enemy">
+
+        </div> 
+    </body>
+</html>
