@@ -19,14 +19,14 @@ let gameManager = {
                 break;
             //Mage stats
             case "mage":
-                player = new Player(classType,150, 300, 300, 80, 50);
+                player = new Player(classType,150, 300, 380, 80, 50);
                 break;
         }
     let getUI = document.querySelector(".ui");
-   getUI.innerHTML = `<img src="images/player/${classType} +.jpg" class="img-player">
+   getUI.innerHTML = `<img src="images/player/${classType}.jpg" class="img-player">
     <div>
         <h3>"${classType}"</h3>
-            <p>Health:${player.health}</p>
+            <p class="playerHP">Health:${player.health}</p>
             <p>Mana:${player.mana}</p>
             <p>Damage:${player.damage}</p>
             <p>Agility:${player.agility}</p>
@@ -79,10 +79,10 @@ let gameManager = {
         }
         getHeader.innerHTML = `<p>Choose an action</p>`;
         getActions.innerHTML = `<a href="#" class="btn-prefight" onclick="playerMoves.calculateAtt()"> Attack!</a>`
-        getEnemy.innerHTML = `<img src="../images/enemies/${enemyType} + .jpg" class="img-enemy">
+        getEnemy.innerHTML = `<img src="../images/enemies/${enemyType}.jpg" class="img-enemy">
         <div>
         <h3>"${enemyType}"</h3>
-            <p>Health:${enemy.health}</p>
+            <p class="enemyHP">Health:${enemy.health}</p>
             <p>Mana:${enemy.mana}</p>
             <p>Damage:${enemy.damage}</p>
             <p>Agility:${enemy.agility}</p>
