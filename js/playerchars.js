@@ -26,7 +26,7 @@ let playerMoves = {
     let damageRanges = Math.floor(Math.random()* Math.floor(10));
     let finalDamage = baseDmg + damageRanges;
     //how many attacks?
-    let numberOfHits = Math.floor(MAth.random() * Math.floor(player.agility/10)/2)+1;
+    let numberOfHits = Math.floor(Math.random() * Math.floor(player.agility/10)/2)+1;
     let attackValues = [finalDamage, numberOfHits];
     return attackValues;
 } 
@@ -41,7 +41,7 @@ let Attack = function (){
     let damageRanges = Math.floor(Math.random()* Math.floor(10));
     let finalDamage = baseDmg + damageRanges;
     //how many times?
-    let numberOfHits = Math.floor(MAth.random() * Math.floor(enemy.agility/10)/2)+1;
+    let numberOfHits = Math.floor(Math.random() * Math.floor(enemy.agility/10)/2)+1;
     let attackValues = [finalDamage, numberOfHits];
     return attackValues;
 }
@@ -58,7 +58,7 @@ if(getPlayerSpeed >= getEnemySpeed) {
     if (enemy.health <= 0 ){
         alert("You won, refresh the browser to fight again!")
         getPlayerHealth.innerHTML = "health: " + player.health;
-        getEnemyHealth.innerHTML =  "health: " 0;
+        getEnemyHealth.innerHTML =  "health: " + 0;
     }
     else {
         //enemy attack
@@ -68,7 +68,7 @@ if(getPlayerSpeed >= getEnemySpeed) {
     alert("You've been hit for " + enemyAttValues[0] + "damage " + enemyAttValues[1] + "times.");
     if (player.health <= 0 ){
         alert("You died, refresh the browser to fight again!")
-        getPlayerHealth.innerHTML = "health: " 0;
+        getPlayerHealth.innerHTML = "health: " + 0;
         getEnemyHealth.innerHTML =  "health: " + enemy.health;
     } else{
         getPlayerHealth.innerHTML = "health: " + player.health;
@@ -84,7 +84,7 @@ if(getPlayerSpeed >= getEnemySpeed) {
     if (player.health <= 0 ){
         alert("You died, refresh the browser to fight again!")
         getEnemyHealth.innerHTML = "health: " + enemy.health;
-        getPlayerHealth.innerHTML =  "health: " 0;
+        getPlayerHealth.innerHTML =  "health: " + 0;
     }
     else {
         //player attack
@@ -94,7 +94,7 @@ if(getPlayerSpeed >= getEnemySpeed) {
     alert("You hit for " + playerAttValues[0] + "damage " + playerAttValues[1] + "times.");
     if (enemy.health <= 0 ){
         alert("You died, refresh the browser to fight again!")
-        getEnemyHealth.innerHTML = "health: " 0;
+        getEnemyHealth.innerHTML = "health: " + 0;
         getPlayerHealth.innerHTML =  "health: " + player.health;
     } else{
         getEnemyHealth.innerHTML = "health: " + enemy.health;
